@@ -5,3 +5,7 @@
 homepage:
   path: /
   controller: App\Controller\DefaultController::homepage
+
+tasks:
+  path: /tasks
+  controller: App\Controller\TasksController::tasks

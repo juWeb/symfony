@@ -20,12 +20,38 @@
             <p>Please, login</p>
         {% endif %}
 
-    <ul>
-        {# {% set elements = range(1, 10) %} #}
-        {% for element in elements %}
-            <li>{{ element }}</li>
-        {% endfor %}
-    </ul>
+        <hr/>
+
+        {{ dump(elements) }}
+
+        <hr/>
+
+        {{ date()|date("Y-m-d H:i:s") }}
+
+        <hr/>
+ 
+        {{ elements[0] }} 
+        
+        <hr/>
+
+        {# {% set elements = [] %} #}
+
+        <ul>
+            {# {% set elements = range(1, 10) %} #}
+            {% for key, element in elements %}
+                {# {{ loop.index }} #}
+                {% if loop.index0 is even %} {# or % 2 == 0 #}
+                    <li style='color: red;'>{{ element }}</li>
+                {% else %}
+                    <li style='color: green;'>{{ element }}</li>
+                {% endif %}
+            {% else %} {# if elements is empty for the loop for #}
+                <p>message</p>
+            {% endfor %}
+        </ul>
+
+        <hr/>
+
 </body>
 
 </html>
