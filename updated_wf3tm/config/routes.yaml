@@ -1,0 +1,21 @@
+#index:
+#    path: /
+#    controller: App\Controller\DefaultController::index
+
+homepage:
+  path:     /
+  controller: App\Controller\DefaultController::homepage
+
+task_list:
+  path:     /tasks
+  controller: App\Controller\TaskController::listTasks
+  #controller: task_controller::listTasks
+  
+task_detail:
+  path:     /task/detail
+  controller: App\Controller\TaskController::taskDetail
+  #controller: task_controller::taskDetail
+
+project_list:
+  path:     /projects
+  controller: App\Controller\ProjectController::displayList
